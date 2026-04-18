@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: "Poppins", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to right, rgb(0, 255, 8), rgb(33, 222, 222));
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0 0 15px #333;
+  color: #292121;
+}
+
+.time-section {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 0 1rem;
+}
+
+.weather-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.app-container {
+  max-width: 450px;
+  background-color: rgb(15, 173, 204);
+  border-radius: 15px;
+  box-shadow: 0 0 12px #333;
+  transition: min-height 2s linear;
+}
+
+.input-section {
+  padding: .9rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.input-section .input-weather {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.input-search {
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.image-section {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.data-weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: .9rem;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid;
+  border-radius: 15px;
+}
+
+.weather-name {
+  margin-top: 1rem;
+}
+
+.weather-status {
+  text-align: center;
+  margin-bottom: .9rem;
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    font-size: 0.5rem;
+  }
+
+  .app-container {
+    max-width: 100%;
+  }
+
+  .input-section .input-weather {
+    font-size: 0.5rem;
+  }
+}
