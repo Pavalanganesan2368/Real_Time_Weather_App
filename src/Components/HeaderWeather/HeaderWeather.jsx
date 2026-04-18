@@ -9,8 +9,10 @@ const HeaderWeather = ({ title }) => {
     const setHours = date.getHours();
     const setMinutes = date.getMinutes();
     const setSeconds = date.getSeconds();
+
+    const setHoursPeriod = setHours >= 12 ? "PM" : "AM"; 
     
-    return `${String(setHours).padStart(2, "0")}:${String(setMinutes).padStart(2, "0")}:${String(setSeconds).padStart(2, "0")}`;    
+    return `${String(setHours % 12).padStart(2, "0")}:${String(setMinutes).padStart(2, "0")}:${String(setSeconds).padStart(2, "0")} ${setHoursPeriod}`;    
   }
   
   useEffect(() => {
