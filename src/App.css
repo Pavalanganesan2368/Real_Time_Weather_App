@@ -10,10 +10,41 @@
     "Poppins", Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
+@property --angle {
+  syntax: "<angle>";
+  initial-value: left;
+  inherits: false;
+}
+
 body {
+  --angle: left;
+  animation: rotate 1s 0.1s linear infinite forwards;
   min-width: 100%;
   min-height: 100vh;
-  background: linear-gradient(to right, rgb(0, 255, 8), rgb(33, 222, 222));
+  background: linear-gradient(to var(--angle), rgb(0, 255, 8), rgb(33, 222, 222));
+  transition: background 0.5s linear;
+}
+
+@keyframes rotate {
+  0% {
+    --angle: top;
+  }
+
+  25% {
+    --angle: right;
+  }
+
+  50% {
+    --angle: bottom;
+  }
+
+  75% {
+    --angle: left;
+  }
+
+  100% {
+    --angle: top;
+  }
 }
 
 .header-container {
